@@ -25,7 +25,7 @@ A Chrome extension that blocks ads across the web **except on YouTube and ChatGP
 ## Usage
 
 - **Popup** – Click the extension icon to see total ads blocked and a link to the admin panel
-- **Admin panel** – Click **Admin Panel** in the popup (must be opened from the extension; do not open `admin.html` as a file)
+- **Admin panel** – Click **Admin Panel** in the popup (must be opened from the extension; do not open as a file)
 
 ## Project Structure
 
@@ -36,10 +36,9 @@ A Chrome extension that blocks ads across the web **except on YouTube and ChatGP
 | `background.js`    | Service worker: stats tracking, protected-site logic |
 | `content.js`       | Detects ad slots for stats (non-YouTube/ChatGPT)     |
 | `popup.html/css/js`| Extension popup UI                                   |
-| `admin.html/css/js`| Full-screen admin dashboard                          |
+| `admin/`           | Full-screen admin dashboard|
 | `icons/`           | Extension icons (16, 32, 48, 128px)                  |
 
 ## Privacy
 
 All stats are stored locally in Chrome. Nothing is sent to external servers.
-

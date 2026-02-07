@@ -7,4 +7,4 @@ chrome.storage.onChanged.addListener((changes, area) => {
     document.getElementById('total').textContent = total.toLocaleString();
   }
 });
-document.getElementById('adminLink').href = chrome.runtime.getURL('admin.html');
+document.getElementById('adminLink').href = chrome.runtime.getURL('admin/index.html');

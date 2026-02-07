@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Eru Add Blocker Admin</title>
+  <link rel="stylesheet" href="admin.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loader">
+      <div class="loader-ring"></div>
+      <div class="loader-ring"></div>
+      <div class="loader-ring"></div>
+    </div>
+    <p class="loading-text">Loading stats...</p>
+    <div class="loading-dots">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="app" id="app" aria-hidden="true">
+    <header class="header">
+      <div class="header-left">
+        <span class="logo-icon"><img src="../icons/icon-white-32.png" alt="Eru"></span>
+        <h1>Eru Add Blocker</h1>
+        <span class="tagline">YouTube & ChatGPT excluded</span>
+      </div>
+      <div class="header-stats">
+        <div class="stat-pill stat-primary" title="Total ad requests blocked across all sites">
+          <span class="stat-pill-label">Blocked</span>
+          <span id="totalBlocked" class="stat-pill-value">0</span>
+        </div>
+        <div class="stat-pill" title="Number of sites where blocking is active">
+          <span class="stat-pill-label">Sites</span>
+          <span id="protectedCount" class="stat-pill-value">0</span>
+        </div>
+        <div class="stat-pill" title="Different ad categories detected">
+          <span class="stat-pill-label">Types</span>
+          <span id="typeCount" class="stat-pill-value">0</span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="refreshBtn" class="btn btn-ghost" title="Refresh stats">↻</button>
+        <button id="resetBtn" class="btn btn-ghost" title="Reset all stats">Reset</button>
+      </div>
+    </header>
+
+    <main class="dashboard">
+      <div class="panel" data-panel="topSites">
+        <h2 class="panel-header" title="Click to collapse/expand">
+          <span>Sites with most ads blocked</span>
+          <span class="panel-toggle" aria-label="Toggle panel">−</span>
+        </h2>
+        <div class="panel-body">
+          <div id="topSites" class="list"></div>
+        </div>
+      </div>
+      <div class="panel" data-panel="protectedSites">
+        <h2 class="panel-header" title="Click to collapse/expand">
+          <span>Protected sites (visits)</span>
+          <span class="panel-toggle" aria-label="Toggle panel">−</span>
+        </h2>
+        <div class="panel-body">
+          <div id="protectedSites" class="list"></div>
+        </div>
+      </div>
+      <div class="panel" data-panel="adTypes">
+        <h2 class="panel-header" title="Click to collapse/expand">
+          <span>Ad types blocked</span>
+          <span class="panel-toggle" aria-label="Toggle panel">−</span>
+        </h2>
+        <div class="panel-body">
+          <div id="adTypes" class="list"></div>
+        </div>
+      </div>
+      <div class="panel" data-panel="blockMethods">
+        <h2 class="panel-header" title="Click to collapse/expand">
+          <span>Block method</span>
+          <span class="panel-toggle" aria-label="Toggle panel">−</span>
+        </h2>
+        <div class="panel-body">
+          <div id="blockMethods" class="list"></div>
+        </div>
+      </div>
+    </main>
+
+    <section class="info-panel">
+      <h2 class="info-toggle" title="Click to collapse/expand">About this extension</h2>
+      <ul class="info-content">
+        <li><strong>YouTube & ChatGPT excluded:</strong> Ads on YouTube and ChatGPT are not blocked, so they work normally.</li>
+        <li><strong>Zero connection impact:</strong> Uses Chrome's declarativeNetRequest API (browser-level filtering) — no extra network hops or slowdowns.</li>
+        <li><strong>Privacy:</strong> Stats are stored locally; nothing is sent to external servers.</li>
+      </ul>
+    </section>
+  </div>
+  <script src="admin.js"></script>
+</body>
+</html>
