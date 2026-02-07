@@ -38,8 +38,8 @@ A Chrome extension that blocks ads across the web **except on YouTube and ChatGP
 | `popup.html/css/js`| Extension popup UI                                   |
 | `admin.html/css/js`| Full-screen admin dashboard                          |
 | `icons/`           | Extension icons (16, 32, 48, 128px)                  |
-| `_metadata/`       | Chrome-generated rule index (auto-created, can ignore) |
 
 ## Privacy
 
 All stats are stored locally in Chrome. Nothing is sent to external servers.
+
