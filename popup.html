@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eru Add Blocker</title>
+  <link rel="stylesheet" href="popup.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="popup">
+    <div class="header">
+      <span class="logo"><img src="icons/icon32.png" alt="Eru Add Blocker"></span>
+      <h1>Eru Add Blocker</h1>
+      <p class="tagline">YouTube & ChatGPT excluded</p>
+    </div>
+    <div class="stat-card">
+      <span class="stat-label">Ads blocked</span>
+      <span class="stat-value" id="total">0</span>
+    </div>
+    <a id="adminLink" href="#" target="_blank" class="admin-link">
+      <span>Admin Panel</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M7 17L17 7M17 7H7M17 7V17"/>
+      </svg>
+    </a>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

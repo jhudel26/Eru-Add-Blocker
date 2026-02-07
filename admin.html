@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eru Add Blocker Admin</title>
+  <link rel="stylesheet" href="admin.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loader">
+      <div class="loader-ring"></div>
+      <div class="loader-ring"></div>
+      <div class="loader-ring"></div>
+    </div>
+    <p class="loading-text">Loading stats...</p>
+    <div class="loading-dots">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="app" id="app" aria-hidden="true">
+    <header class="header">
+      <div class="header-left">
+        <span class="logo-icon"><img src="icons/icon-white-32.png" alt="Eru"></span>
+        <h1>Eru Add Blocker</h1>
+        <span class="tagline">YouTube & ChatGPT excluded</span>
+      </div>
+      <div class="header-stats">
+        <div class="stat-pill stat-primary">
+          <span class="stat-pill-label">Blocked</span>
+          <span id="totalBlocked" class="stat-pill-value">0</span>
+        </div>
+        <div class="stat-pill">
+          <span class="stat-pill-label">Sites</span>
+          <span id="protectedCount" class="stat-pill-value">0</span>
+        </div>
+        <div class="stat-pill">
+          <span class="stat-pill-label">Types</span>
+          <span id="typeCount" class="stat-pill-value">0</span>
+        </div>
+      </div>
+      <button id="resetBtn" class="btn btn-ghost">Reset</button>
+    </header>
+
+    <main class="dashboard">
+      <div class="panel">
+        <h2>Sites with most ads blocked</h2>
+        <div id="topSites" class="list"></div>
+      </div>
+      <div class="panel">
+        <h2>Protected sites (visits)</h2>
+        <div id="protectedSites" class="list"></div>
+      </div>
+      <div class="panel">
+        <h2>Ad types blocked</h2>
+        <div id="adTypes" class="list"></div>
+      </div>
+      <div class="panel">
+        <h2>Block method</h2>
+        <div id="blockMethods" class="list"></div>
+      </div>
+    </main>
+
+    <section class="info-panel">
+      <h2>About this extension</h2>
+      <ul>
+        <li><strong>YouTube & ChatGPT excluded:</strong> Ads on YouTube and ChatGPT are not blocked, so they work normally.</li>
+        <li><strong>Zero connection impact:</strong> Uses Chrome's declarativeNetRequest API (browser-level filtering) — no extra network hops or slowdowns.</li>
+        <li><strong>Privacy:</strong> Stats are stored locally; nothing is sent to external servers.</li>
+      </ul>
+    </section>
+  </div>
+  <script src="admin.js"></script>
+</body>
+</html>
