@@ -20,7 +20,7 @@ A Chrome extension that blocks ads across the web **except on YouTube and ChatGP
 1. Open Chrome and go to `chrome://extensions`
 2. Enable **Developer mode** (top-right toggle)
 3. Click **Load unpacked**
-4. Select the `BrowserExtension` folder
+4. Select the `Folder Containing the extension file` folder
 
 ## Usage
 
