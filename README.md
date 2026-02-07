@@ -1,6 +1,6 @@
 # Eru Add Blocker
 
-A Chrome extension that blocks ads across the web **except on YouTube**, with an admin panel for analytics.
+A Chrome extension that blocks ads across the web **except on YouTube and Chatgpt**, with an admin panel for analytics.
 
 ## Features
 
@@ -56,3 +56,4 @@ Chrome uses a default icon if none are set. To add custom icons:
 ## Privacy
 
 All stats are stored locally in Chrome. Nothing is sent to external servers.
+
