@@ -1,4 +1,4 @@
-# Eru Add Blocker
+# Eru Ads Blocker
 
 A Chrome extension that blocks ads across the web **except on YouTube and ChatGPT**, with a full-screen admin dashboard for analytics.
 
